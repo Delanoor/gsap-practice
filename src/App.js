@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  const app = useRef();
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(
+        ".box",
+        {
+          opacity: 0,
+        },
+        app
+      );
+      gsap.to(".box", {
+        x: "100%",
+        xPercent: -50,
+        duration: 3,
+        opacity: 1,
+        repeatDelay: 1,
+        yoyo: true,
+      });
+    }, app); // scope
+
+    return () => ctx.revert();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="App" ref={app}>
+      <div className="box">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
+      <p>
+        Edit <code>src/App.js</code> and save to reload.
+      </p>
     </div>
   );
 }
