@@ -6,6 +6,7 @@ html {
   text-align: center;
   color: white;
   overflow: hidden;
+  height: 100vh;
 }
 
 .App-logo {
