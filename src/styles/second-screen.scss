@@ -7,6 +7,7 @@
   .second-container {
     // width: 1440px;
     // height: 100vh;
+
     width: 100%;
     height: 100%;
     margin: 10% auto;
@@ -16,6 +17,10 @@
     align-items: center;
     // border: 3px solid red;
   }
+}
+
+.second-container {
+  background: #323232;
 }
 
 .img-container,

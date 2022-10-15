@@ -22,7 +22,7 @@ function SecondScreen() {
       tl.current = gsap
         .timeline({
           scrollTrigger: {
-            trigger: ".container",
+            // trigger: ".container",
             toggleActions: "resume none none pause",
             // onEnter, onLeave, onEnterBack, onLeaveBack
             // play, pause, resume, reverse, restart, reset, complete, none
@@ -58,12 +58,14 @@ function SecondScreen() {
             scrub: true,
           },
         })
+
         .to(".img-container-second", {
-          scale: 0.5,
+          scale: 0.6,
           scrollTrigger: {
-            trigger: ".container",
-            start: "top center",
-            end: "+=10%",
+            trigger: ".second-container",
+            start: "+=80%",
+            end: "+=30%",
+            scrub: true,
 
             markers: true,
           },
