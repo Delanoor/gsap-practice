@@ -64,7 +64,7 @@ function SecondScreen() {
           scrollTrigger: {
             trigger: ".second-container",
             start: "+=80%",
-            end: "+=30%",
+            end: "+=10%",
             scrub: true,
 
             markers: true,
