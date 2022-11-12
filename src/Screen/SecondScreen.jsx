@@ -23,7 +23,7 @@ function SecondScreen() {
         .timeline({
           scrollTrigger: {
             // trigger: ".container",
-            toggleActions: "resume none none pause",
+            toggleActions: "restart none none pause",
             // onEnter, onLeave, onEnterBack, onLeaveBack
             // play, pause, resume, reverse, restart, reset, complete, none
           },
@@ -50,6 +50,7 @@ function SecondScreen() {
 
           yPercent: -20,
           scrollTrigger: {
+            toggleActions: "restart none none pause",
             pin: true,
             trigger: ".container",
             start: "top 10%",
@@ -63,8 +64,8 @@ function SecondScreen() {
           scale: 0.6,
           scrollTrigger: {
             trigger: ".second-container",
-            start: "+=80%",
-            end: "+=10%",
+            start: "10% 10%",
+            end: "+=15%",
             scrub: true,
 
             markers: true,
