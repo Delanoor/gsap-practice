@@ -18,6 +18,7 @@ function ThirdScreen() {
         { currentTime: 0, autoAlpha: 0 },
         {
           //   duration: 1,
+
           autoAlpha: 1,
           currentTime: video.duration || 1,
           ease: "power3.inOut",
@@ -26,8 +27,10 @@ function ThirdScreen() {
       ScrollTrigger.create({
         trigger: ".video-container",
         animation: videoAnimation,
+        onUpdate: (self) => console.log(self),
+
         start: "top top",
-        end: "+=400%",
+        end: "+=800%",
         pin: true,
         markers: true,
         scrub: true,
