@@ -46,36 +46,6 @@ function SecondScreen() {
         opacity: 0,
         duration: 0.3,
       });
-      // tl.to(".img-container", {
-      //   scale: 0.5,
-      //   scrollTrigger: {
-      //     toggleActions: "restart none none pause",
-      //     pin: true,
-      //     trigger: ".container",
-      //     start: "top 10%",
-      //     end: "+=100%",
-      //     markers: true,
-      //     scrub: true,
-      //   },
-      // yPercent: -20,
-      // });
-
-      // let secondTl = gsap.timeline();
-
-      // secondTl.to(".img-container", {
-      //   scale: 0.6,
-      //   yPercent: -20,
-      //   scrollTrigger: {
-      //     trigger: ".second-container",
-      //     toggleActions: "restart none none pause",
-      //     immediateRender: false,
-      //     start: "top top",
-      //     end: "+=55%",
-      //     scrub: true,
-      //     pinSpacer: ".img-container",
-      //     markers: true,
-      // },
-      // });
 
       gsap.utils.toArray(".img-container").forEach((img, i) => {
         let imgAnimation = gsap.to(img, {
@@ -89,24 +59,10 @@ function SecondScreen() {
           end: "+=100%",
           pin: true,
           pinSpacing: true,
-          markers: true,
+          //   markers: true,
           scrub: true,
         });
       });
-      // gsap.to(".img-container", {
-      //   scale: 0.5,
-      //   scrollTrigger: {
-      //     toggleActions: "restart none none pause",
-      //     pin: true,
-      //     trigger: ".container",
-      //     start: "top 10%",
-      //     end: "+=100%",
-      //     // markers: true,
-      //     scrub: true,
-      //     pinSpacing: true,
-      //   },
-      //   yPercent: -20,
-      // });
     }, app);
 
     return () => {

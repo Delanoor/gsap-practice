@@ -1,4 +1,11 @@
 .third-screen {
   background: rgb(255, 104, 104);
+  height: 100%;
   min-height: 100vh;
+  overflow: hidden;
+
+  .video-container {
+    display: flex;
+    justify-content: center;
+  }
 }
