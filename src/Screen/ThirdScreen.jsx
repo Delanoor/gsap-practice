@@ -26,8 +26,10 @@ function ThirdScreen() {
       ScrollTrigger.create({
         trigger: ".video-container",
         animation: videoAnimation,
+        onUpdate: (self) => console.log(self),
+
         start: "top top",
-        end: "+=400%",
+        end: "+=800%",
         pin: true,
         markers: true,
         scrub: true,
