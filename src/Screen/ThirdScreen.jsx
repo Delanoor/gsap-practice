@@ -15,9 +15,9 @@ function ThirdScreen() {
     let ctx = gsap.context(() => {
       let videoAnimation = gsap.fromTo(
         video,
-        { currentTime: 0, autoAlpha: 0 },
+        { currentTime: 0 },
         {
-          //   duration: 1,
+          duration: 1,
 
           currentTime: video.duration || 1,
           ease: "power3.inOut",
