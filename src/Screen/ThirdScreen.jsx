@@ -18,7 +18,7 @@ function ThirdScreen() {
         { currentTime: 0, autoAlpha: 0 },
         {
           //   duration: 1,
-          autoAlpha: 1,
+
           currentTime: video.duration || 1,
           ease: "power3.inOut",
         }
